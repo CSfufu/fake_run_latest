@@ -146,4 +146,4 @@ def run(dvt, loc: list, v, d=15):
     while True:
         vRand = 1000/(1000/v-(2*random.random()-1)*d)
         run1(dvt, loc, vRand)
-        print("跑完一圈了")
+        print("Finished a lap")

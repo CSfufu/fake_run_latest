@@ -63,9 +63,9 @@ def main():
         with RemoteServiceDiscoveryService((address, port)) as rsd:
             with DvtSecureSocketProxyService(rsd) as dvt:
                 try:
-                    print(f"已开始模拟跑步，速度大约为 {config.config.v} m/s")
-                    print("会无限循环，按 Ctrl+C 退出")
-                    print("请勿直接关闭窗口，否则无法还原正常定位")
+                    print(f"Started simulating running, the speed is approximately {config.config.v} m/s")
+                    print("Will loop indefinitely, press Ctrl+C to exit.")
+                    print("Please do not close the window directly, otherwise normal positioning cannot be restored.")
                     run.run(dvt, loc, config.config.v)
                 except KeyboardInterrupt:
                     logger.debug("get KeyboardInterrupt (inner)")
